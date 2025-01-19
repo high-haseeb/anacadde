@@ -1,0 +1,25 @@
+version: "3.8"
+name: "anasigorta"
+
+services:
+  vitejs:
+    image: registry.gitlab.com/anasigorta/anacadde:${TAG}
+    container_name: anasigorta-anacadde
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - "3001:3000"
+    deploy:
+      resources:
+        limits:
+          cpus: '2.5'
+          memory: 2500M
+        reservations:
+          cpus: '2'
+          memory: 2000M
+
+networks:
+  default:
+    name: local-network
+    external: true

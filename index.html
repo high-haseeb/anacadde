@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui=1" />
+	<meta charset="utf-8" />
+	<title>Ana Sigorta #AnaDünyası</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="main.css" type="text/css" />
+	<link rel="stylesheet" href="/site-css/css/plugins.css">
+	<link rel="stylesheet" href="/site-css/css/style.css">
+	<link rel="stylesheet" href="/site-css/css/green.css">
+	<link rel="stylesheet" href="/site-css/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet" />
+</head>
+<script>
+	const playVideos = () => {
+		window.document.getElementById("billBoardVideo").play();
+		window.document.getElementById("arrow-down").play();
+	}
+</script>
+
+<body onload="playVideos()">
+
+	<div class="intro-container" id="intro-container">
+		<button class="close-button" id="intro-close"><img src="icons/close.png"
+				style="object-fit: cover; width: 2rem; height: 2rem; opacity: 0;"></img></button>
+
+		<div style="text-align: center;" id="intro-welcome" class="intro-element">
+			<b> #AnaDünyası</b>
+			<br />
+			<h2>artık yayında!</h2>
+			<button id="intro-welcome-start" style="padding: 1rem 2rem; user-select: auto;">
+				<h4>Keşfet</h4>
+			</button>
+		</div>
+
+		<div style="text-align: center; opacity: 0; user-select: none; display: none;" class="fade-out intro-element"
+			id="tour-one">
+			<img src="/icons/arrow.png" style="transform: rotate(-45deg) translate(-100px, -100px);" class="arrow" />
+			<h2>Binaların üzerindeki ikonlara tıklayabilirsiniz</h2>
+
+			<div style="display: flex; width: 100%; align-items: center; justify-content: center; gap: 3rem;">
+				<button id="intro-one-back" style="padding: 1rem 2rem; user-select: auto;">
+					<h4>geri</h4>
+				</button>
+				<button id="intro-two" style="padding: 1rem 2rem; user-select: auto;">
+					<h4>ileri</h4>
+				</button>
+			</div>
+		</div>
+
+		<div style="" class="fade-out section-header" id="tour-two">
+			<img src="/icons/arrow.png"
+				class="arrow"  id="tour-two-arrow"/>
+			<h2 style="font-size: 2rem; font-weight: bold;">Ana menüye buradan ulaşabilirsiniz. </h2>
+
+			<button id="intro-two-back" style="padding: 1rem 2rem; user-select: auto;">
+				<h4>geri</h4>
+			</button>
+
+			<button id="intro-end" style="padding: 1rem 2rem;">
+				<h4>ileri</h4>
+			</button>
+		</div>
+	</div>
+
+	<!-- header -->
+	<header class="site-header">
+		<nav class="navbar navbar-expand-lg center-brand mt-5">
+			<!--side menu open button-->
+			<a href="javascript:void(0)" class=" d-lg-inline-block sidemenu_btn" id="sidemenu_toggle" style="background-color: #304D8C;">
+				<span></span> <span></span> <span></span>
+			</a>
+		</nav>
+		<!-- side menu -->
+		<div class="side-menu">
+			<div class="inner-wrapper">
+				<span class="btn-close" id="btn_sideNavClose"><i class="text-white"></i><i></i></span>
+				<nav class="side-nav">
+					<ul class="navbar-nav w-100">
+						<li class="nav-item active">
+							<a class="nav-link pagescroll" href="https://www.anasigorta.com.tr/site/#home">Ana Sayfa</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pagescroll" href="https://www.anasigorta.com.tr/site/#biz-kimiz">Biz
+								Kimiz</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pagescroll"
+								href="https://www.anasigorta.com.tr/site/#urunlerimiz">Ürünlerimiz</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pagescroll" href="https://www.anasigorta.com.tr/site/acente-bul">Acente
+								Bul</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pagescroll"
+								href="https://www.anasigorta.com.tr/site/#anlasmali-kurumlar">Anlaşmalı Kurumlar</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link" href="#" id="yatirimciIliskileriDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Yatırımcı İlişkileri
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="yatirimciIliskileriDropdown">
+								<li><a class="dropdown-item"
+										href="https://www.anasigorta.com.tr/site/bilgilendirme/performans-raporlari">Performans
+										Raporları</a></li>
+							</ul>
+						</li>
+						<!--              <li class="nav-item">-->
+						<!--                <a class="nav-link pagescroll" href="#nasil-yapilir">Nasıl Yapılır?</a>-->
+						<!--              </li>-->
+						<!--               <li class="nav-item">-->
+						<!--                  <a class="nav-link pagescroll" href="#agency">agency</a>-->
+						<!--               </li>-->
+						<li class="nav-item dropdown">
+							<a class="nav-link" href="#" id="onlineIslemlerDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Online İşlemler
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="onlineIslemlerDropdown">
+								<li><a class="dropdown-item"
+										href="https://www.anasigorta.com.tr/site/police-sorgula">Poliçe Sorgula</a></li>
+								<li><a class="dropdown-item"
+										href="https://www.anasigorta.com.tr/site/hasar-sorgula">Hasar Sorgula</a></li>
+								<li><a class="dropdown-item"
+										href="https://otohasar.anasigorta.com.tr/ihbar/?act=entry">Hasar İhbar</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pagescroll"
+								href="https://www.anasigorta.com.tr/site/iletisim">İletişim</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="side-footer w-100">
+					<ul class="social-icons-simple white top40">
+						<li><a href="https://www.facebook.com/AnaSigorta/?ref=py_c" target="_blank"><i
+									class="fab fa-facebook"></i> </a> </li>
+						<li><a href="https://www.instagram.com/anasigorta/?hl=tr" target="_blank"><i
+									class="fab fa-instagram"></i> </a> </li>
+						<li><a href="https://twitter.com/anasigorta" target="_blank"><svg
+									xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20">
+									<path fill="white"
+										d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+								</svg> </a> </li>
+						<li><a href="https://www.youtube.com/channel/UC6pLt1oVjFb0zWigKFq875w" target="_blank"><i
+									class="fab fa-youtube"></i> </a> </li>
+						<li><a href="https://tr.linkedin.com/company/ana-sigorta" target="_blank"><i
+									class="fab fa-linkedin"></i> </a> </li>
+					</ul>
+					<p class="whitecolor">&copy; 2024 Ana Sigorta. </p>
+				</div>
+			</div>
+		</div>
+		<a id="close_side_menu" href="javascript:void(0);"></a>
+		<!-- End side menu -->
+	</header>
+	<!-- header -->
+	<script type="module" src="main.js"></script>
+	<div id="logo">
+		<img src="logos/logo.png" style="border-color: black; border-top: 1px" />
+
+		<video id="billBoardVideo" controls muted playsInline autoplay loop style="display: none">
+			<source src="videos/output.mp4" />
+		</video>
+
+		<video id="arrow-down" controls muted autoplay playsInline loop style="display: none">
+			<source src="videos/arrow-down-black.mp4" />
+		</video>
+		<h1 id="main-title"
+			style="min-height: 45px; padding-left: 21px; padding-right: 21px; width: 220px; padding-top: 15px">
+			<span style="margin-top: 0.4em">#AnaDünyası</span>
+		</h1>
+	</div>
+
+	<!--	<div id="menu">-->
+	<!--		<img src="icons/menu.png" />-->
+	<!--	</div>-->
+	<div id="balon" style="display: none">
+		<div class="balon_ic">
+			<div>
+				<img src="https://www.anasigorta.com.tr/assets/images/list-icon-over6-tastamam.svg?v=LKjfKNL6TRC0CoUZzmtPySAxUGddKlxDNjVleN_LNlM"
+					alt="" />
+			</div>
+			<span>Tastamam<br />Kasko</span>
+		</div>
+		<div class="balon_ic">
+			<div>
+				<img src="https://www.anasigorta.com.tr/assets/images/list-icon-over6.svg?v=jNyJD510gCLublPHfE12zcXK1SFDUPZjKCStDJ_OQH8"
+					alt="" />
+			</div>
+			<span>Kasko<br />Sigortası</span>
+			<span>Aracınız Ana Sigorta ile güvence altında olsun, siz de yolunuza güvenle devam edin!</span>
+		</div>
+		<div class="balon_ic">
+			<div>
+				<img src="https://www.anasigorta.com.tr/assets/images/kasko-svg-mavi.svg?v=fKpYAkukwqmY4GhCn_tYJiaZetZsEetXUo6kseRb1n0"
+					alt="" />
+			</div>
+			<span>Trafik<br />Sigortası</span>
+		</div>
+		<div class="balon_ic">
+			<div>
+				<img src="https://www.anasigorta.com.tr/assets/images/k2-over.png" alt="" />
+			</div>
+			<span>Tamamlayıcı<br />Sağlık Sigortası</span>
+		</div>
+		<div class="balon_ic">
+			<div><img src="https://www.anasigorta.com.tr/assets/images/list-icon-over2.svg" alt="" /></div>
+			<span>Konut<br />Sigortası</span>
+		</div>
+		<div class="balon_ic">
+			<div><img src="https://www.anasigorta.com.tr/assets/images/list-icon-over5.svg" alt="" /></div>
+			<span>Ferdi Kaza<br />
+				Sigortası</span>
+		</div>
+		<div class="balon_ic">
+			<div><img src="https://www.anasigorta.com.tr/assets/images/list-icon-over8.svg" alt="" /></div>
+			<span>DASK<br />
+				Sigortası</span>
+		</div>
+		<div class="balon_ic">
+			<div><img src="https://www.anasigorta.com.tr/assets/images/list-icon-over4.svg" alt="" /></div>
+			<span>Seyahat Sağlık<br />
+				Sigortası</span>
+		</div>
+		<div class="balon_ic">
+			<div><img src="https://www.anasigorta.com.tr/assets/images/list-icon-over7.svg" alt="" /></div>
+			<span>Tarım<br />
+				Sigortası</span>
+		</div>
+		<div class="balon_ic">
+			<div><img src="https://www.anasigorta.com.tr/assets/images/list-icon-over9.svg" alt="" /></div>
+			<span>İşyeri<br />
+				Sigortası</span>
+		</div>
+		<div class="balon_ic">
+			<div><img src="https://www.anasigorta.com.tr/assets/images/icons/logistic-over.svg" alt="" /></div>
+			<span>Nakliyat<br />
+				Sigortası</span>
+		</div>
+	</div>
+	<canvas style="width: 100vw; height: 100vh" id="game"></canvas>
+	<div id="loading-screen">
+		<div class="loader" id="loader"></div>
+		<div class="loader-circle"></div>
+	</div>
+	<div class="label-container" id="label-container">
+		<button class="nav-button" id="btn-prev">
+			<img src="icons/prev.svg" alt="Previous" class="icon" />
+		</button>
+
+		<div id="label" class="label">Label Text</div>
+
+		<button class="nav-button" id="btn-next">
+			<img src="icons/next.svg" alt="Next" class="icon" />
+		</button>
+	</div>
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="site-css/js/bootstrap.min.js"></script>
+	<script src="site-css/js/jquery-3.6.0.min.js"></script>
+	<!--Bootstrap Core-->
+	<script src="/site-css/js/popper.min.js"></script>
+
+	<!--to view items on reach-->
+	<script src="/site-css/js/jquery.appear.js"></script>
+
+	<!--Equal-Heights-->
+	<script src="/site-css/js/jquery.matchHeight-min.js"></script>
+
+	<!--Owl Slider-->
+	<script src="/site-css/js/owl.carousel.min.js"></script>
+
+	<!--number counters-->
+	<script src="/site-css/js/jquery-countTo.js"></script>
+
+	<!--Parallax Background-->
+	<script src="/site-css/js/parallaxie.js"></script>
+
+	<!--Cubefolio Gallery-->
+	<script src="/site-css/js/jquery.cubeportfolio.min.js"></script>
+
+	<!--FancyBox popup-->
+	<script src="/site-css/js/jquery.fancybox.min.js"></script>
+
+	<!-- Video Background-->
+	<script src="/site-css/js/jquery.background-video.js"></script>
+
+	<!--TypeWriter-->
+	<script src="/site-css/js/typewriter.js"></script>
+
+	<!--Particles-->
+	<script src="/site-css/js/particles.min.js"></script>
+
+	<!--WOw animations-->
+	<script src="/site-css/js/wow.min.js"></script>
+
+	<!--Revolution SLider-->
+	<script src="/site-css/js/revolution/jquery.themepunch.tools.min.js"></script>
+	<script src="/site-css/js/revolution/jquery.themepunch.revolution.min.js"></script>
+	<script src="/site-css/js/revolution/extensions/revolution.extension.actions.min.js"></script>
+	<script src="/site-css/js/revolution/extensions/revolution.extension.carousel.min.js"></script>
+	<script src="/site-css/js/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+	<script src="/site-css/js/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script src="/site-css/js/revolution/extensions/revolution.extension.migration.min.js"></script>
+	<script src="/site-css/js/revolution/extensions/revolution.extension.navigation.min.js"></script>
+	<script src="/site-css/js/revolution/extensions/revolution.extension.parallax.min.js"></script>
+	<script src="/site-css/js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+	<script src="/site-css/js/revolution/extensions/revolution.extension.video.min.js"></script>
+
+	<!--Google Map API-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJnKEvlwpyjXfS_h-J1Cne2fPMqeb44Mk"></script>
+	<script src="/site-css/js/functions.js"></script>
+
+</body>
+
+</html>

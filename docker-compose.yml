@@ -1,0 +1,35 @@
+version: "3.8"
+name: "anasigorta"
+
+services:
+  vitejs:
+    build:
+      context: .
+      dockerfile: docker/prod/web/Dockerfile
+    image: anasigorta-anacadde:latest
+    container_name: anasigorta-anacadde
+    stdin_open: true
+    tty: true
+    restart: always
+    volumes:
+      - ./public:/app/public:rw
+      - ./site-css:/app/site-css:rw
+      - ./index.html:/app/index.html:rw
+      - ./main.css:/app/main.css:rw
+      - ./main.js:/app/main.js:rw
+      - ./vite.config.js:/app/vite.config.js:rw
+    ports:
+      - "8002:4173"
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1500M
+        reservations:
+          cpus: '1'
+          memory: 1000M
+
+networks:
+  default:
+    name: local-network
+    external: true
