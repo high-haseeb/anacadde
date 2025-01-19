@@ -457,7 +457,7 @@ class Game {
             if (label == "İletişim") {
                 this.targetPosition.copy(new THREE.Vector3(temp.x, 1, temp.z).sub({ x: 7.0, y: 0, z: 7.0 }));
             } else {
-                if (sSeprate || label == "Ana Servis") {
+                if (isSeprate || label == "Ana Servis") {
                     console.log("seprate found")
                     this.targetPosition.copy(temp);
                 } else {
