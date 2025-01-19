@@ -281,12 +281,12 @@ class Game {
 
         this.positionFactor = new THREE.Vector3();
         //============= debug UI
-        this.gui = new GUI();
-        const targetFolder = this.gui.addFolder("Position");
-        targetFolder.add(this.targetPosition, 'x', -10, 10).name("X position");
-        targetFolder.add(this.targetPosition, 'y', -10, 10).name("Y position");
-        targetFolder.add(this.targetPosition, 'z', -10, 10).name("Z position");
-        targetFolder.open();
+        // this.gui = new GUI();
+        // const targetFolder = this.gui.addFolder("Position");
+        // targetFolder.add(this.targetPosition, 'x', -10, 10).name("X position");
+        // targetFolder.add(this.targetPosition, 'y', -10, 10).name("Y position");
+        // targetFolder.add(this.targetPosition, 'z', -10, 10).name("Z position");
+        // targetFolder.open();
         //============= debug UI
 
         this.currentPosition = new THREE.Vector3(7, 0, 8);
@@ -457,7 +457,7 @@ class Game {
             if (label == "İletişim") {
                 this.targetPosition.copy(new THREE.Vector3(temp.x, 1, temp.z).sub({ x: 7.0, y: 0, z: 7.0 }));
             } else {
-                if (isSeprate || label == "Ana Servis") {
+                if (sSeprate || label == "Ana Servis") {
                     console.log("seprate found")
                     this.targetPosition.copy(temp);
                 } else {
